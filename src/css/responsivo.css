@@ -19,7 +19,6 @@
     .projetos .container-projetos {
         padding: 0 30px;
     }
-
 }
 
 @media(max-width: 425px) {
@@ -33,6 +32,10 @@
 
     .home .container-foto img{
         max-width: 320px;
+    }
+
+    .skills {
+        padding: 30px;
     }
 
     .projetos {
