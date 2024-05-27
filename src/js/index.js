@@ -3,15 +3,29 @@ const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 
 botaoMostrarProjetos.addEventListener('click', () => {
     mostrarMaisProjetos();
-    esconderBotao();
 });
 
-function esconderBotao() {
-    botaoMostrarProjetos.classList.add("remover");
+function mostrarMaisProjetos() {
+    const projetosEscondidos = document.querySelectorAll('.projeto:not(.ativo)');
+    const todosProjetosAtivos = document.querySelectorAll('.projeto.ativo');
+
+    if (projetosEscondidos.length > 0) {
+        projetosEscondidos.forEach(projeto => {
+            projeto.classList.add('ativo');
+        });
+        botaoMostrarProjetos.textContent = 'Mostrar menos';
+    } else {
+        todosProjetosAtivos.forEach((projeto, index) => {
+            if (index >= 2) { // Mantém os primeiros 2 projetos sempre visíveis
+                projeto.classList.remove('ativo');
+            }
+        });
+        botaoMostrarProjetos.textContent = 'Mostrar mais';
+    }
 }
 
-function mostrarMaisProjetos() {
-    projetosInativos.forEach(projetoInativo => {
-        projetoInativo.classList.add('ativo');
-    });
-}
+const contato = document.getElementById("contato");
+contato.addEventListener("Click", function () {
+    window.location.href = "contato";
+})
+

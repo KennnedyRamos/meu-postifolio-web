@@ -1,4 +1,7 @@
 html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: #fff;
     scroll-behavior: smooth;
 }
@@ -6,45 +9,70 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
+    padding: 0 auto;
     max-width: 1120px;
-    background: linear-gradient(150deg, #000000, #9e00ff);
-    background-size: 120% 120%;
+}
+.bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.agradecimento {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.agradecimento h2, h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px;
+    padding: 15px;
 }
-
 .cabecalho .logo {
-    width: 62px;
-    height: 65px;
+    position: fixed;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #fff;
     text-decoration: underline;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
 
     font-family: "Raleway", sans-serif;
     transition: 0.2s;
 }
 
 .cabecalho a:hover .logo {
-    color: #9443d8;
-    border: 2px solid #9443d8;
+    color: #00A8AA;
+    border: 2px solid #00A8AA;
 }
 
+
 .cabecalho .menu li a {
-    font-size: 20px;
+    font-size: 15px;
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 10px 15px;
     transition: 0.2s;
 }
 
 .cabecalho .menu li a:hover {
-    background-color: #9443d8;
+    background-color: #00A8AA;
     color: #fff;
     border-radius: 50px;
 }
@@ -57,8 +85,40 @@ body {
     justify-content: space-between;
 }
 
+
+.menu{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    margin-right: 30px;
+    margin: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.menu .menu-selecao a:hover{
+    background-color: #00A8AA;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 25px;
+    gap: 20px;
+    border: 1px solid;
+}
+
+.home {
+    display: flex;
+    max-width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-around;
+}
+
 .home .informacoes {
     display: flex;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
     flex-direction: column;
     gap: 15px;
     letter-spacing: 2px;
@@ -72,34 +132,6 @@ body {
     margin-bottom: 20px;
 }
 
-.home .informacoes {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.home .redes-sociais {
-    display: flex;
-    gap: 20px;
-}
-
-.home .redes-sociais a i {
-    border: 1px solid #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    text-align: center;
-    font-size: 26px;
-    transition: 0.3s;
-}
-
-.home .redes-sociais a i:hover {
-    color: #9443d8;
-    border: 1px solid #9443d8;
-    transform: scale(1.1);
-}
-
 .home .container-foto .foto {
     max-width: 450px;
     border-radius: 50%;
@@ -111,32 +143,124 @@ body {
 }
 
 .home .foto.sombra-interna {
-    background: linear-gradient(to right, #8a35c8, #18C063, #00eea2);
+    background: linear-gradient(to right, #003366,#0033CC,#000066);
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
 }
 
-.skills{
-    padding: 70px 0;
+.sobre-mim {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.sobre-mim .sobre-mim-titulo {
+    padding: 50px;
     text-align: center;
-    font-size: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
     
 }
-.skills .tecnologias h1{
-    padding: 70px 0;
+
+.sobre-mim {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.social .redes-sociais {
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.social .redes-sociais a i {
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.social .redes-sociais a i:hover {
+    align-items: center;
+    color: #00C4CC;
+    border: 1px solid #00C4CC;
+    transform: scale(1.1);
+}
+
+.skills {
+    margin: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    padding:60px 0;
+    box-sizing: border-box;
+}
+
+.soft-skills {
+    text-align: center;
+}
+
+.soft-skills h1{
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    padding: 50px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px; 
+}
+
+.ferramentas img{
+    background-color: #ffffff67;
+    max-width: 130px;
+    height: auto;
+    opacity: 0.9;
+    border: 1.5px solid #00C4CC;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    transition: 0.3s;
+}
+
+.ferramentas img:hover{
+    align-items: center;
+    color: #00C4CC;
+    border: 2.5px solid #00C4CC;
+    transform: scale(1.14);
 }
 
 .projetos {
-    padding: 70px 0;
+    margin: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 10px;
 }
 
 .projetos .titulo {
     text-align: center;
-    padding: 60px 0;
-    font-size: 45px;
-    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    padding: 50px 0;
+    font-size: 25px;
     text-transform: uppercase;
 }
 
@@ -149,8 +273,8 @@ body {
 }
 
 .projetos .projeto {
-    max-width: 260px;
-    max-height: 500px;
+    max-width: 300px;
+    max-height: 300px;
     position: relative;
     display: none;
 }
@@ -163,8 +287,17 @@ body {
     height: 100%;
 }
 
+.projetos .container-projetos .projeto.ativo .meu-portifolio{
+    display: flex;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
 .projetos .projeto h3 {
-    background-color: #040203;
+    background-color: #8ac5c7;
     width: 100%;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -174,19 +307,19 @@ body {
 }
 
 .projetos .projeto .informacoes-projeto {
-    background-color: #040203;
+    background-color: #8ac5c7;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     font-weight: 600;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.5s;
     padding: 20px;
 }
 
 .projetos .container-projetos .projeto:hover .informacoes-projeto {
-    opacity: 0.7;
+    opacity: 0.8;
     background-color: #000;
 }
 
@@ -207,25 +340,81 @@ body {
 }
 
 .projetos .btn-mostrar-projetos:hover {
-    background-color: #9443d8;
+    background-color: #00A8AA;
     transition: 0.3s;
 }
 
 .projetos .btn-mostrar-projetos.remover {
     display: none;
-
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
+.contato {
+    max-width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    margin: auto;
+}
 
-    50% {
-        background-position: 100% 50%;
-    }
+.contato .titulo{
+    color: #f5f5f5;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.contato .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form label {
+    color: #f5f5f5;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.form input {
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    transition: all 0.5s;
+}
+.form input:focus {
+    border-radius: 20px;
+}
 
-    100% {
-        background-position: 0% 50%;
-    }
+.form textarea {
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+
+.form textarea:focus{
+    border-radius: 20px;
+}
+
+.form  button {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 30px;
+}
+
+.form button:hover{
+    background: #f5f5f5;
+    color: #00A8AA;
+    border-radius: 20px;
 }
