@@ -274,7 +274,7 @@ body {
 
 .projetos .projeto {
     max-width: 300px;
-    max-height: 300px;
+    max-height: 410px;
     position: relative;
     display: none;
 }
@@ -293,7 +293,7 @@ body {
     margin: 0;
     height: 100%;
     max-width: 300px;
-    max-height: 300px;
+    max-height: 410px;
 }
 
 .projetos .projeto h3 {
