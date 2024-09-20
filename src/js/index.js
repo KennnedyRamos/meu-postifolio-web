@@ -16,7 +16,7 @@ function mostrarMaisProjetos() {
         botaoMostrarProjetos.textContent = 'Mostrar menos';
     } else {
         todosProjetosAtivos.forEach((projeto, index) => {
-            if (index >= 2) { // Mantém os primeiros 2 projetos sempre visíveis
+            if (index >= 6) { 
                 projeto.classList.remove('ativo');
             }
         });

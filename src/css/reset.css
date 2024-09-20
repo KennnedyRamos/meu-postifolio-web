@@ -1,18 +1,24 @@
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     border: none;
     outline: none;
-    box-sizing:
-    border-box ;
+    box-sizing: border-box; 
 }
+
+/* Links */
 a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; 
 }
+
+/* Listas */
 ul {
-    list-style: none;
+    list-style: none; 
 }
+
+/* Imagens */
 img {
-    max-width: 100%;
+    max-width: 100%; 
+    height: auto; 
 }
